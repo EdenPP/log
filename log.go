@@ -330,10 +330,10 @@ func (l *logger) Infof(format string, v ...interface{}) {
 }
 
 func (l *logger) Print(v ...interface{}) {
-	l.log(LOG_INFO, format, v...)	
+	l.log(LOG_INFO, v...)
 }
 
-func Printf(format string, v ...interface{}) {
+func (l *logger) Printf(format string, v ...interface{}) {
 	l.logf(LOG_INFO, format, v...)	
 }
 
