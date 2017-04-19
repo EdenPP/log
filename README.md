@@ -7,13 +7,13 @@ logging
 ## How To Use
 
 
-Get the code
+Get the go code
 
 ```
 go get -u github.com/EdenPP/log
 ```
 
-Use the code
+Use the package
 
 
 ```go
@@ -21,12 +21,18 @@ Use the code
 import "github.com/EdenPP/log"
 
 func main() {
+
+
+    filePath := "/var/log/test.log"
 	
 	// Set log level, suport 
 	log.SetLevelByString("INFO")
-	log.SetOutputByName(conf.Log.GetLogPath() + conf.Log.GetLogFile())
+	
+	// set file path
+	log.SetOutputByName(filePath)
+	
+	// rotate by houre
 	log.SetRotateByHour()
-	log.SetHighlighting(false)
 
 }
 
