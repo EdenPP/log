@@ -329,6 +329,14 @@ func (l *logger) Infof(format string, v ...interface{}) {
 	l.logf(LOG_INFO, format, v...)
 }
 
+func (l *logger) Print(v ...interface{}) {
+	l.log(LOG_INFO, format, v...)	
+}
+
+func Printf(format string, v ...interface{}) {
+	l.logf(LOG_INFO, format, v...)	
+}
+
 func StringToLogLevel(level string) LogLevel {
 	switch level {
 	case "fatal":
