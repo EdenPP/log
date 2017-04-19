@@ -124,6 +124,14 @@ func Fatalf(format string, v ...interface{}) {
 	_log.Fatalf(format, v...)
 }
 
+func Print(v ...interface{}) {
+	_log.Print(v...)
+}
+
+func Printf(format string, v ...interface{}) {
+	_log.Printf(format, v...)
+}
+
 func SetLevelByString(level string) {
 	_log.SetLevelByString(level)
 }
