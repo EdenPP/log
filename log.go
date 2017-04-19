@@ -384,5 +384,5 @@ func New() *logger {
 }
 
 func Newlogger(w io.Writer, prefix string) *logger {
-	return &logger{_log: log.New(w, prefix, LstdFlags), level: LOG_LEVEL_ALL, highlighting: true}
+	return &logger{_log: log.New(w, prefix, LstdFlags), level: LOG_LEVEL_ALL, highlighting: false}
 }
